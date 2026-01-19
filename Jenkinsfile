@@ -24,10 +24,11 @@ pipeline {
     steps {
         sh '''
           sleep 5
-          curl -s http://localhost:5000/health | grep ok
+          curl -s http://ml-model-api:5000/health | grep ok
         '''
     }
 }
+
 
 
 
