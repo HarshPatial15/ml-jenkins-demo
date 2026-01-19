@@ -9,10 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git(
-                    url: 'https://github.com/HarshPatial15/ml-jenkins-demo.git',
-                    branch: 'main'
-                )
+                // Use Jenkins' built-in SCM checkout
+                checkout scm
             }
         }
 
