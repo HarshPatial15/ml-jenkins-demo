@@ -15,6 +15,7 @@ pipeline {
             steps {
                 // Replace with your GitHub repo URL after you push
                 git 'https://github.com/HarshPatial15/ml-jenkins-demo.git'
+                branch: 'main'
             }
         }
 
