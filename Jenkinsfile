@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        label '' // default agent inside Jenkins container
+        docker { 
+            image 'docker:24.0.5' // Docker-enabled image 
+            args '-v /var/run/docker.sock:/var/run/docker.sock' }// default agent inside Jenkins container
     }
 
     environment {
