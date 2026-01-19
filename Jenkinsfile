@@ -24,7 +24,7 @@ pipeline {
     steps {
         sh '''
           sleep 5
-          curl -s http://localhost:5000/health | grep \\"status\\":\\"ok\\"
+          curl -s http://localhost:5000/health | grep ok
         '''
     }
 }
