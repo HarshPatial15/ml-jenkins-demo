@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Replace with your GitHub repo URL after you push
-                git 'https://github.com/yourusername/ml-jenkins-demo.git'
+                git 'https://github.com/HarshPatial15/ml-jenkins-demo.git'
             }
         }
 
