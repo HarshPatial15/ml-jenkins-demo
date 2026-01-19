@@ -7,16 +7,6 @@ pipeline {
     }
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                git(
-                    url: 'https://github.com/HarshPatial15/ml-jenkins-demo.git',
-                    branch: 'main'
-                )
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
@@ -39,7 +29,7 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline completed: image built & API deployed.'
+            echo 'Pipeline completed: model trained, image built, API deployed.'
         }
         failure {
             echo 'Pipeline failed. Check console logs.'
