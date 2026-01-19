@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Use Jenkins' built-in SCM checkout
                 checkout scm
             }
         }
