@@ -21,10 +21,11 @@ pipeline {
         }
 
         stage('Smoke Test') {
-            steps {
-                sh 'curl -s http://localhost:5000/health | grep ok'
-            }
-        }
+    steps {
+        sh 'curl -s http://localhost:5000/health | grep \\"ok\\"'
+    }
+}
+
     }
 
     post {
